@@ -15,10 +15,9 @@ function merge(firstHalf, secondHalf) {
     while (firstHalf.length != 0 && secondHalf.length != 0) {
         firstHalf[0] < secondHalf[0] ? sorted.push(findMinAndRemoveSorted(firstHalf)) : sorted.push(findMinAndRemoveSorted(secondHalf));
     }
+    console.log(`this is the firsthalf ${firstHalf}`, `this is the secondHalf ${secondHalf}`)
     return sorted.concat(firstHalf).concat(secondHalf);
     // Reason why first and second halves need to be concatenated is because you don't know which array will have left over elements.
-    // It seems odd that if/when there are left over elements 
-    console.log(`this is the firsthalf ${firstHalf}`, `this is the secondHalf ${secondHalf}`)
 }
 
 function mergeSort (array) {
