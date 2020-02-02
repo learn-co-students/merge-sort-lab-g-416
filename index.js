@@ -1,16 +1,14 @@
-// let array1 = [ 3, 6, 8, 11]
-
 function findMinAndRemoveSorted(array) {
     let min = Math.min(...array)
     let indexOfMin = array.indexOf(min)
     return parseInt(array.splice(indexOfMin, 1))
 }
-
+// let array1 = [ 3, 6, 8, 11]
 // console.log(findMinAndRemoveSorted(array1))
+
 
 // let firstHalf = [1,7,9]
 // let secondHalf = [4,5,6]
-
 function merge(firstHalf, secondHalf) {
     let sorted = []
 
@@ -19,7 +17,8 @@ function merge(firstHalf, secondHalf) {
     }
     return sorted.concat(firstHalf).concat(secondHalf);
     // Reason why first and second halves need to be concatenated is because you don't know which array will have left over elements.
-
+    // It seems odd that if/when there are left over elements 
+    console.log(`this is the firsthalf ${firstHalf}`, `this is the secondHalf ${secondHalf}`)
 }
 
 function mergeSort (array) {
