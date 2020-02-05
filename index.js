@@ -18,3 +18,16 @@ function findMinAndRemoveSorted (array) {
    return array.shift()
 }
 
+// 2. Implement the merge function to combine two ALREADY SORTED arrays into one larger array.
+function merge(array1, array2) {
+   const merged = []
+   while (array1.length !== 0 && array2.length !== 0) {
+      if (array1[0] < array2[0]) {
+         merged.push(array1.shift())
+      } else {
+         merged.push(array2.shift())
+      }
+   }
+   return merged.concat(array1).concat(array2)
+}
+
