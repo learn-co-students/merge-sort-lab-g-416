@@ -15,9 +15,7 @@
 //console.log("Example: ", findMinAndRemoveSortedExample(array))
 
 function findMinAndRemoveSorted (array) {
-   let value = array[0]
-   array.shift()
-   return value
+   return array.shift()
 }
 
 // 2. Implement the merge function to combine two ALREADY SORTED arrays into one larger array.
