@@ -1,32 +1,29 @@
-function findMinAndRemoveSorted(arr1, arr2 = [10e18]) {
-    let min1 = arr1[0];
-    let min2 = arr2[0];
-    if (min1 < min2) {
-        return arr1.shift();
-    } else {
-        return arr2.shift();
-    };
-};
-
-function merge(arr1, arr2) {
-    let sorted = [];
-    let currentMin;
-    while (arr1.length + arr2.length != 0) {
-        let currentMin = findMinAndRemoveSorted(arr1, arr2);
-        sorted.push(currentMin);
-        console.log(sorted)
+function findMinAndRemoveSorted(array){
+    return array.shift()
+  }
+  
+  function merge(firstSubarray, secondSubArray){
+    let sorted = []
+    while(firstSubarray.length != 0 && secondSubArray.length != 0){
+      if(firstSubarray[0] < secondSubArray[0]){
+        sorted.push(findMinAndRemoveSorted(firstSubarray))
+      } else {
+        sorted.push(findMinAndRemoveSorted(secondSubArray))
+      }
     }
-    return sorted;
-}
-
-function mergeSort(arr) {
-    let midpoint = arr.length / 2;
-    let firstHalf = arr.slice(0, midpoint);
-    let secondHalf = arr.slice(midpoint, arr.length);
-
-    if (arr.length > 2) {
-        return merge(mergeSort(firstHalf), mergeSort(secondHalf))
+    return sorted.concat(firstSubarray).concat(secondSubArray)
+  }
+  
+  function mergeSort(array){
+    let midpoint = array.length/2
+    let firstHalf = array.slice(0, midpoint)
+    let secondHalf = array.slice(midpoint, array.length)
+    let sorted;
+  
+    if(array.length < 2){
+      return array
     } else {
-        return arr;
+      sorted = merge(mergeSort(firstHalf), mergeSort(secondHalf))
     }
-}
+    return sorted
+  }
