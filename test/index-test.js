@@ -25,9 +25,9 @@ describe('#merge', function() {
   });
 });
 
-describe('#mergeSort', function() {
-  it("should sort an unsorted array", function() {
-    let unsorted = [12, 10, 9, 14, 1, 3, 5, 11, 6, 15, 16, 13, 2, 4, 8, 7]
-    expect(mergeSort(unsorted)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
-  });
-});
+// describe('#mergeSort', function() {
+//   it("should sort an unsorted array", function() {
+//     let unsorted = [12, 10, 9, 14, 1, 3, 5, 11, 6, 15, 16, 13, 2, 4, 8, 7]
+//     expect(mergeSort(unsorted)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])
+//   });
+// });
