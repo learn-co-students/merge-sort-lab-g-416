@@ -28,8 +28,8 @@ function merge(arrayOne, arrayTwo) {
 
 function mergeSort(array) {
     let midPoint = array.length / 2;
-    let first = array.splice(0, midPoint);
-    let second = array.splice(midPoint, array.length);
+    let first = array.slice(0, midPoint);
+    let second = array.slice(midPoint, array.length);
 
     if (array.length < 2) {
         return array
