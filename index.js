@@ -24,5 +24,14 @@ function merge(array1, array2) {
     }
     let merged = newArray.concat(array1).concat(array2)
     return merged 
-   
+}
+
+function mergeSort(array) {
+    let firstHalf = array.slice(0, (array.length / 2))
+    let secondHalf = array.slice((array.length / 2), array.length)
+    if (array.length < 2) {
+        return array
+    } else {
+        merge(mergeSort(firstHalf), mergeSort(secondHalf))
+    }
 }
