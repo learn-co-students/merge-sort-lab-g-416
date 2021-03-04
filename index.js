@@ -29,9 +29,11 @@ function merge(array1, array2) {
 function mergeSort(array) {
     let firstHalf = array.slice(0, (array.length / 2))
     let secondHalf = array.slice((array.length / 2), array.length)
+    let sorted 
     if (array.length < 2) {
         return array
     } else {
-        merge(mergeSort(firstHalf), mergeSort(secondHalf))
+        sorted = merge(mergeSort(firstHalf), mergeSort(secondHalf))
     }
+    return sorted 
 }
