@@ -5,7 +5,7 @@ function findMinAndRemoveSorted(array) {
             min = array[i]
         }
     }
-    array.splice(array.indexOf(min), 1)
+    array.splice(array.indexOf(min),1)
     return min 
 }
 
