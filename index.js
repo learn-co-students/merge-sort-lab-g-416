@@ -34,7 +34,7 @@ function merge(firstSubArray, secondSubArray) {
        sorted.push(min, secondmin);
      } else {
        min = secondmin;
-       sorted.push(min, firstmin);
+       sorted.push(min);
      }
 
   }
