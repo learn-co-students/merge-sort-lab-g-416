@@ -31,9 +31,10 @@ function merge(firstSubArray, secondSubArray) {
      
      if (firstmin < secondmin) {
        min = firstmin;
-       sorted.push(min, secondmin)
+       sorted.push(min, secondmin);
      } else {
        min = secondmin;
+       sorted.push(min, firstmin);
      }
 
   }
